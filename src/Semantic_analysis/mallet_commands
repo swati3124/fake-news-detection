@@ -1,0 +1,7 @@
+./bin/mallet import-dir --input /Users/swati.arora/Desktop/FakeNews/Real/ --output real.mallet --keep-sequence --remove-stopwords
+
+./bin/mallet import-dir --input /Users/swati.arora/Desktop/FakeNews/Fake/ --output fake.mallet --keep-sequence --remove-stopwords
+
+./bin/mallet train-topics --input fake.mallet --num-topics 20 --output-state fake-state.gz --output-topic-keys fake_keys.csv --output-doc-topics fake_composition.csv
+
+./bin/mallet train-topics --input real.mallet --num-topics 20 --output-state real-state.gz --output-topic-keys real_keys.csv --output-doc-topics real_composition.csv
