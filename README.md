@@ -1,5 +1,5 @@
 ###########################################################
- # Fake News Identification using Knowledge-Base (KBase) #
+ # Fake News Identification  #
 ###########################################################
 
 
