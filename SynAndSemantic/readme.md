@@ -1,10 +1,4 @@
-
-
 <------------------------- FAKE NEWS RECOGNITION ----------------------->
-
-MEMBER DETAILS :-
-
-Heenal Doshi 004758927 doshi.heenal@gmail.com Omkar Patil 904760474 omkar.9194@gmail.com Pranav Sodhani 804591764 sodhanipranav@gmail.com Shubham Mittal 104774903 mitshubh@gmail.com Swati Arora 404758379 swati3124@gmail.com
 
 THE PROJECT STRUCTURE CONSISTS OF TWO MAIN FOLDERS ;- CODE, DATA.
 
