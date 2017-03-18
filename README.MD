@@ -21,7 +21,7 @@ THE SECOND DAT FILE TRAININGSETLABELS CONSISTS OF THE LABELS FOR THE ABOVE ARTIC
 
 <--------------------------------------------- EXECUTION STEPS :- ---------------------------------->
 1) RUN THE PARSEDATASET.JAVA FILE TO CONVERT THE TRAININGSET.DAT, TRAININGSETLABELS.DAT TO FAKE AND REAL FOLDER. 
-THESE FOLDERS WILL CONTAI 500 FAKE AND REAL .TXT FILES RESPECTIVELY
+THESE FOLDERS WILL CONTAI 500 FAKE AND REAL .TXT FILES RESPECTIVELY. WE HAVE ALREADY PROCESSED THE DATA SET  AND PROVIDED IT INTO THE DATA FOLDER.
 
 <---------------------------------------------SEMANTIC ANALYSIS :- ---------------------------------->
 
@@ -34,18 +34,18 @@ FAKE_KEYS.TXT,FAKE_COMPOSITION.TXT AND REAL_KEYS.TXT, REAL_COMPOSITION.TXT FILES
 TO USE THE MALLET TOOL FOR DOING THE ABOVE, INSTALL MALLET AND EXECUTE THE FOLLOWING COMMANDS. PLEASE TAKE CARE OF
 THE PATH WHILE EXECUTING THE COMMANDS
 
+RUN THE FOLLOWING COMMANDS IN THE MALLET DIRECTORY AFTER UNZIPPING IT.
 
-./bin/mallet import-dir --input /Users/swati.arora/Desktop/FakeNews/Real/ --output real.mallet --keep-sequence --remove-stopwords
+./bin/mallet import-dir --input PATH TILL THE REAL FOLDER IN THE DATA FOLDER --output real.mallet --keep-sequence --remove-stopwords
 
-./bin/mallet import-dir --input /Users/swati.arora/Desktop/FakeNews/Fake/ --output fake.mallet --keep-sequence --remove-stopwords
+./bin/mallet import-dir --input PATH TILL THE FAKE FOLDER IN THE DATA FOLDER --output fake.mallet --keep-sequence --remove-stopwords
 
 ./bin/mallet train-topics --input fake.mallet --num-topics 20 --output-state fake-state.gz --output-topic-keys fake_keys.csv --output-doc-topics fake_composition.csv
 
 ./bin/mallet train-topics --input real.mallet --num-topics 20 --output-state real-state.gz --output-topic-keys real_keys.csv --output-doc-topics real_composition.csv
 
 
-4)After this execute, the feature_generation.py, this will produce the output_fake.csv , output_real.csv which will contain the topic_proximity
-for every file.
+4)After this execute, the feature_generation.py, this will produce the output_fake.csv , output_real.csv which will contain the topic_proximity for every file. put tehse
 
 <---------------------------------------------SYNTACTIC ANALYSIS :- ---------------------------------->
 
